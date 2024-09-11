@@ -1,0 +1,79 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<link rel="stylesheet" href="/css/home.css">
+<div class="conteudo">
+    <div class="container">'
+        <div class="newQuestion">
+            <h1 class="nomeUser">Olá <%= pessoaObject.nome%></h1>
+            <button class="btn btn-pattern" onclick="window.location.href='/newQuestion'">Nova pergunta</button>
+        </div>
+
+        <hr>
+
+        <div class="listNoQuestions">
+            <h1>Perguntas sem respostas</h1>
+
+            <% if (!perguntasSemResposta || perguntasSemResposta.length === 0) { %>
+                <p>Não há perguntas no momento.</p>
+            <% } else { %>
+                <% perguntasSemResposta.forEach(pergunta => { %>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3><%= pergunta.titulo %></h3>
+                            <p>Pergunta realizada dia: 
+                                <%= new Date(pergunta.createdAt).toLocaleDateString('pt-BR', {
+                                    day: '2-digit',
+                                    month: '2-digit',
+                                    year: 'numeric'
+                                }) %>
+                            </p>
+                        </div>
+
+                    
+                        <div class="footer">
+                            <a href="/question/<%= pergunta.id %>">
+                                <button class="btn btn-pattern">Responder</button>
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+            
+        </div>
+
+        <hr>
+
+        <div class="listQuestions">
+            <h1>Outras perguntas</h1>
+
+            <% if (!perguntasComResposta || perguntasComResposta.length === 0) { %>
+                <p>Não há perguntas no momento.</p>
+            <% } else { %>
+                <% perguntasComResposta.forEach(pergunta => { %>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3><%= pergunta.titulo %></h3>
+                            <p>Pergunta realizada dia: 
+                                <%= new Date(pergunta.createdAt).toLocaleDateString('pt-BR', {
+                                    day: '2-digit',
+                                    month: '2-digit',
+                                    year: 'numeric'
+                                }) %>
+                            </p>
+                        </div>
+
+                        <div class="footer">
+                            <a href="/question/<%= pergunta.id %>">
+                                <button class="btn btn-pattern">Responder</button>
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+            
+        </div>
+    </div>
+</div>
+</body>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    align-items: center; 
+    background-color: #58af9b;
+    padding: 20px 20px; 
+    box-sizing: border-box; 
+}
+
+a {
+    margin: 20px;
+    color: white !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #153f35 !important;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-end; 
+    flex: 1; 
+}
+
+.logo img{
+    width: 100px !important;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+

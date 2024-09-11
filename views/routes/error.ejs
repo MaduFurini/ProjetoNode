@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+
+<link rel="stylesheet" href="/css/error.css">
+<main class="main">
+    <section class="section">
+        <div class="left">
+            <p>Erro :(</p>
+            <h4><%= message %></h4>
+            <a href="#" class="btn" onclick="window.location.href='/'">Voltar</a>
+        </div>
+        <div class="right">
+            <img src="/img/erro.png" alt="imagem de erro 404">
+            <div class="shadow"></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

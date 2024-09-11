@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<link rel="stylesheet" href="/css/home.css">
+<div class="conteudo">
+    <div class="container">'
+        <div class="newQuestion">
+            <h1 class="nomeUser">Olá <%= pessoa.nome%></h1>
+            <button class="btn btn-pattern" onclick="window.location.href='/newQuestion'">Nova pergunta</button>
+        </div>
+
+        <hr>
+
+        <div class="listQuestions">
+            <h1>Perguntas realizadas</h1>
+
+            <% perguntas.forEach(pergunta => { %>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5><%= pessoa ? pessoa.nome : 'Nome não encontrado' %></h5>
+                        <h3><%= pergunta.titulo %></h3>
+                        <p>Pergunta realizada dia: 
+                            <%= new Date(pergunta.createdAt).toLocaleDateString('pt-BR', {
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric'
+                            }) %>
+                        </p>
+                    </div>
+                    
+                    <div class="footer">
+                        <div class="buttons">
+                            <a href="/question/<%= pergunta.id %>">
+                                <button class="btn btn-pattern">Responder</button>
+                            </a>
+                            
+                            <a href="/question/delete/<%= pergunta.id %>">
+                                <button class="btn btn-danger">Excluir</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+</body>
+<%- include('../partials/footer.ejs') %>
+
+

@@ -1,0 +1,27 @@
+img{
+    width: 100px;
+}
+
+.newQuestion {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    flex: 1;
+}
+
+

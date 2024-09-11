@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<link rel="stylesheet" href="/css/newQuestion.css">
+
+<div class="container">
+    <h1>Nova pergunta</h1>
+
+    <hr>
+    
+    <div class="card-answer">
+        <form action="/registrarPergunta" method="post">
+            <label for="">
+                <p>Título</p>
+                <input type="text" name="titulo" id="" placeholder="Digite sua resposta">
+            </label>        
+            
+            <label for="">
+                <p>Descrição</p>
+                <input type="text" name="descricao" id="" placeholder="Digite sua resposta">
+            </label>  
+
+            <input type="hidden" name="pessoa" value="<%- pessoa %>">
+            
+            <button class="btn btn-pattern">Registrar</button>
+        </form>
+    </div>
+</div>
+
+
+
+    </body>
+<%- include('../partials/footer.ejs') %>

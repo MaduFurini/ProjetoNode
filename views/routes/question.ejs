@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<link rel="stylesheet" href="/css/question.css">
+<div class="conteudo">
+<div class="container">
+    <h1><%= pergunta.titulo %></h1>
+
+    <hr>
+    
+    <div class="card-answer">
+        <form action="/resposta" method="post">
+            <label for="">
+                <input type="text" name="resposta" id="" placeholder="Digite sua resposta">
+            </label>         
+
+            <input type="hidden" name="pessoa" value="<%- pessoa %>">
+            <input type="hidden" name="pergunta" value="<%- pergunta.id %>">
+            
+            <button class="btn btn-pattern">Responder</button>
+        </form>
+    </div>
+
+    <% if (respostas && respostas.length > 0) { %>
+        <h4>Respostas anteriores</h4>
+
+        <% respostas.forEach(resposta => { 
+            const pessoaResposta = pessoas.find(pessoa => pessoa.id === resposta.id_pessoa);
+        %>
+
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <h5><%= pessoaResposta ? pessoaResposta.nome : 'Nome não encontrado' %></h5>
+                    <h3><%= resposta.resposta %></h3>
+                    <p>Pergunta realizada dia: 
+                        <%= new Date(resposta.createdAt).toLocaleDateString('pt-BR', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric'
+                        }) %>
+                    </p>
+                </div>
+            </div>
+            
+        <% }) %>
+    <% } %>
+</div>
+</div>
+
+
+    </body>
+<%- include('../partials/footer.ejs') %>
