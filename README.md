@@ -42,7 +42,7 @@ Este projeto é um aplicativo web desenvolvido com Node.js e Express que permite
 
 3. **Configure um banco de dados local:**
 
-  Certifique-se de que o banco de dados está configurado conforme especificado no arquivo de configuração (/database/database.js)
+     Certifique-se de que o banco de dados está configurado conforme especificado no arquivo de configuração (/database/database.js)
 
 4. **Inicie o servidor:**
 
@@ -50,4 +50,5 @@ Este projeto é um aplicativo web desenvolvido com Node.js e Express que permite
    npm start
 
 5. **Acesse a aplicação:**
-  Abra o navegador e vá para http://localhost:3000 para interagir com o formulário de perguntas e respostas.
+
+     Abra o navegador e vá para http://localhost:3000 para interagir com o formulário de perguntas e respostas.
