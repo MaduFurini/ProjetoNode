@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Este projeto é um aplicativo web desenvolvido com Node.js e Express, criado com o propósito de adquirir e aprimorar conhecimentos em Node.js. O sistema permite aos usuários criar, visualizar, responder e excluir perguntas. É uma plataforma ideal para aprender e praticar operações CRUD (Criar, Ler, Atualizar e Excluir) em um banco de dados, além de gerenciar rotas em uma aplicação web.
+Este projeto é um aplicativo web desenvolvido com Node.js e Express, criado com o propósito de adquirir e aprimorar conhecimentos em Node.js. O sistema permite aos usuários criar, visualizar, responder e excluir perguntas. É uma plataforma ideal para aprender e praticar operações Criar, Ler, e Excluir em um banco de dados, além de gerenciar rotas em uma aplicação web.
 
 O objetivo principal é fornecer uma base sólida para entender conceitos fundamentais de desenvolvimento web, como o gerenciamento de rotas e a manipulação de dados em um banco de dados relacional. A interface foi projetada para ser intuitiva e esteticamente agradável, oferecendo uma experiência de usuário eficiente e moderna.
 
