@@ -70,4 +70,26 @@ O objetivo principal é fornecer uma base sólida para entender conceitos fundam
 ### Login
 ![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/login.png)
 
+### Erro de cadastro de usuários com mesmo email
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/emailExistente.png)
 
+### Entrar
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/entrar.png)
+
+### Erro de senha incorreta
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/senhaIncorreta.png)
+
+### Home
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/home.png)
+
+### Nova Pergunta
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/novaPergunta.png)
+
+### Home com perguntas registradas
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/homePerguntas.png)
+
+### Visualizar e responder perguntas
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/viewPergunta.png)
+
+### Perfil do usuário
+![](https://raw.githubusercontent.com/MaduFurini/ProjetoNode/main/projectImages/perguntasUser.png)
