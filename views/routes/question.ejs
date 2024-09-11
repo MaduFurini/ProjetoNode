@@ -5,11 +5,13 @@
 <div class="conteudo">
 <div class="container">
     <h1><%= pergunta.titulo %></h1>
+    <h4><%- pergunta.descricao %></h4>
 
     <hr>
     
     <div class="card-answer">
         <form action="/resposta" method="post">
+
             <label for="">
                 <input type="text" name="resposta" id="" placeholder="Digite sua resposta">
             </label>         
