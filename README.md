@@ -42,15 +42,27 @@ O objetivo principal é fornecer uma base sólida para entender conceitos fundam
    ```bash
    npm install
 
-3. **Configure um banco de dados local:**
+3. **Instale o Nodemon:**
+
+   ```bash
+   npm install nodemon
+
+4. **Atualize as Dependências:**
+
+   ```bash
+   npm update
+
+5. **Configure um banco de dados local:**
 
      Certifique-se de que o banco de dados está configurado conforme especificado no arquivo de configuração (/database/database.js)
 
-4. **Inicie o servidor:**
+6. **Inicie o servidor:**
 
    ```bash
    npm start
 
-5. **Acesse a aplicação:**
+7. **Acesse a aplicação:**
 
      Abra o navegador e vá para http://localhost:3000 para interagir com o formulário de perguntas e respostas.
+
+
