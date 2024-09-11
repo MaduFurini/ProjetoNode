@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <h5><%= pessoaResposta ? pessoaResposta.nome : 'Nome não encontrado' %></h5>
                     <h3><%= resposta.resposta %></h3>
-                    <p>Pergunta realizada dia: 
+                    <p>Resposta dada dia:
                         <%= new Date(resposta.createdAt).toLocaleDateString('pt-BR', {
                             day: '2-digit',
                             month: '2-digit',

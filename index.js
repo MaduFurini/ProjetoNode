@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const body = require('body-parser');
 const { Op, Sequelize, where} = require('sequelize');
 
@@ -37,7 +36,7 @@ server.post('/validateUser', (req, res) => {
 
     Pessoa.findOne({where: {email: email}}).then((pessoa) => {        
         if (pessoa){
-            if (pessoa && bcrypt.compareSync(senha, pessoa.senha)) {
+            if (senha === pessoa.senha) {
                 authStatus = true; 
                 pessoaAtual = pessoa.id;
                 res.redirect('/home');
@@ -59,18 +58,16 @@ server.post('/cadastrar', (req, res) => {
     var email = req.body.email;
     var senha = req.body.senha;
 
-    const hashedSenha = bcrypt.hashSync(senha, 10) 
-    
     Pessoa.create({
         nome: nome,
         email: email,
-        senha: hashedSenha
+        senha: senha
     }).then((pessoa) => {
         authStatus = true; 
         pessoaAtual = pessoa.id
         res.redirect('/home');
     }).catch((e) => {
-        if(e.name == 'SequelizeUniqueConstraintError'){
+        if(e.name === 'SequelizeUniqueConstraintError'){
             res.render(viewPath + 'error', {
                 message: 'Email já existe'
             });
